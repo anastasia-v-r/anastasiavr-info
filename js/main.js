@@ -1,1 +1,1 @@
-alert("This is a JS Alert");
+alert("{Warning} [Site Not Yet Finished] {Warning}");
