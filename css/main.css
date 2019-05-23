@@ -1,14 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: #26262b;
     overflow: hidden;
 }
 
 .site {
     display: grid;
     grid-template-columns: 1fr 9fr;
-    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 
+                        9fr 
+                        1fr;
     grid-gap: 10px;
     grid-template-areas:
         "header header"
@@ -19,11 +20,16 @@
 .header {
     grid-area: header;
     background-color: #d4d4d5;
+    text-align: center;
+    font-size: 60px;
+    font-style: bold;
+    color: rgb(107, 191, 230);
 }
 
 .sidebar {
     grid-area: sidebar;
     background-color: #d4d4d5;
+    text-align: center;
 }
 
 .content {
@@ -34,6 +40,7 @@
 .footer {
     grid-area: footer;
     background-color: #d4d4d5;
+    text-align: center;
 }
 
  
