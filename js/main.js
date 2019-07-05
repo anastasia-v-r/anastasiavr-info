@@ -1,1 +1,1 @@
-alert("{Warning} [Site Not Yet Finished] {Warning}");
+alert("⚠️ [Site Not Yet Finished] ⚠️");
