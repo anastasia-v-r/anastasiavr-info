@@ -6,15 +6,16 @@
 
 .site {
     display: grid;
+    background-color: rgb(184, 184, 184);
     grid-template-columns: 1fr 9fr;
     grid-template-rows: 1fr 
-                        9fr 
+                        9.3fr 
                         1fr;
     grid-gap: 10px;
     grid-template-areas:
         "header header"
         "sidebar main"
-        "footer footer";
+        "sidebar footer";
 }
 
 .header {
