@@ -14,15 +14,39 @@ body {
 
 .sitenav {
     grid-area: header;
-    background: gold;
+    background: orange;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 2fr 6fr 1fr 1fr 1fr;
+}
+
+.sitenav box{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border-style: groove;
+}
+
+.sitenav box a:link, a:visited{
+    background-color: orange;
+    color: black;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.sitenav box a:hover{
+    background-color: orangered
 }
 
 .contentnav {
     grid-area: sidebar;
-    background: salmon;
+    background: rgb(255, 194, 80);
 }
 
 .content {
