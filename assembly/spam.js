@@ -1225,11 +1225,11 @@ function updateGlobalBufferAndViews(buf) {
 
 
 var STATIC_BASE = 1024,
-    STACK_BASE = 22096,
+    STACK_BASE = 22128,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 5264976,
-    DYNAMIC_BASE = 5264976,
-    DYNAMICTOP_PTR = 21888;
+    STACK_MAX = 5265008,
+    DYNAMIC_BASE = 5265008,
+    DYNAMICTOP_PTR = 21920;
 
 assert(STACK_BASE % 16 === 0, 'stack must start aligned');
 assert(DYNAMIC_BASE % 16 === 0, 'heap must start aligned');
@@ -1748,7 +1748,7 @@ var ASM_CONSTS = [];
 
 
 
-// STATICTOP = STATIC_BASE + 21072;
+// STATICTOP = STATIC_BASE + 21104;
 /* global initializers */  __ATINIT__.push({ func: function() { globalCtors() } });
 
 
@@ -1759,7 +1759,7 @@ var ASM_CONSTS = [];
 
 
 /* no memory initializer */
-var tempDoublePtr = 22080
+var tempDoublePtr = 22112
 assert(tempDoublePtr % 8 == 0);
 
 function copyTempFloat(ptr) { // functions, because inlining this code increases code size too much
@@ -5074,43 +5074,6 @@ function copyTempDouble(ptr) {
 
    
 
-  
-  function _usleep(useconds) {
-      // int usleep(useconds_t useconds);
-      // http://pubs.opengroup.org/onlinepubs/000095399/functions/usleep.html
-      // We're single-threaded, so use a busy loop. Super-ugly.
-      var msec = useconds / 1000;
-      if ((ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) && self['performance'] && self['performance']['now']) {
-        var start = self['performance']['now']();
-        while (self['performance']['now']() - start < msec) {
-          // Do nothing.
-        }
-      } else {
-        var start = Date.now();
-        while (Date.now() - start < msec) {
-          // Do nothing.
-        }
-      }
-      return 0;
-    }function _nanosleep(rqtp, rmtp) {
-      // int nanosleep(const struct timespec  *rqtp, struct timespec *rmtp);
-      if (rqtp === 0) {
-        ___setErrNo(22);
-        return -1;
-      }
-      var seconds = HEAP32[((rqtp)>>2)];
-      var nanoseconds = HEAP32[(((rqtp)+(4))>>2)];
-      if (nanoseconds < 0 || nanoseconds > 999999999 || seconds < 0) {
-        ___setErrNo(22);
-        return -1;
-      }
-      if (rmtp !== 0) {
-        HEAP32[((rmtp)>>2)]=0;
-        HEAP32[(((rmtp)+(4))>>2)]=0;
-      }
-      return _usleep((seconds * 1e6) + (nanoseconds / 1000));
-    }
-
    
 
   function _pthread_cond_wait() { return 0; }
@@ -5534,7 +5497,7 @@ function nullFunc_viijii(x) { abortFnPtrError(x, 'viijii'); }
 
 var asmGlobalArg = {};
 
-var asmLibraryArg = { "___cxa_uncaught_exceptions": ___cxa_uncaught_exceptions, "___gxx_personality_v0": ___gxx_personality_v0, "___lock": ___lock, "___map_file": ___map_file, "___setErrNo": ___setErrNo, "___syscall140": ___syscall140, "___syscall145": ___syscall145, "___syscall6": ___syscall6, "___syscall91": ___syscall91, "___unlock": ___unlock, "___wasi_fd_write": ___wasi_fd_write, "__addDays": __addDays, "__arraySum": __arraySum, "__emscripten_syscall_munmap": __emscripten_syscall_munmap, "__isLeapYear": __isLeapYear, "__memory_base": 1024, "__table_base": 0, "_abort": _abort, "_emscripten_get_heap_size": _emscripten_get_heap_size, "_emscripten_memcpy_big": _emscripten_memcpy_big, "_emscripten_resize_heap": _emscripten_resize_heap, "_fd_write": _fd_write, "_getenv": _getenv, "_llvm_stackrestore": _llvm_stackrestore, "_llvm_stacksave": _llvm_stacksave, "_nanosleep": _nanosleep, "_pthread_cond_wait": _pthread_cond_wait, "_strftime": _strftime, "_strftime_l": _strftime_l, "_usleep": _usleep, "abort": abort, "abortOnCannotGrowMemory": abortOnCannotGrowMemory, "abortStackOverflow": abortStackOverflow, "demangle": demangle, "demangleAll": demangleAll, "getTempRet0": getTempRet0, "jsStackTrace": jsStackTrace, "memory": wasmMemory, "nullFunc_ii": nullFunc_ii, "nullFunc_iidiiii": nullFunc_iidiiii, "nullFunc_iii": nullFunc_iii, "nullFunc_iiii": nullFunc_iiii, "nullFunc_iiiii": nullFunc_iiiii, "nullFunc_iiiiid": nullFunc_iiiiid, "nullFunc_iiiiii": nullFunc_iiiiii, "nullFunc_iiiiiid": nullFunc_iiiiiid, "nullFunc_iiiiiii": nullFunc_iiiiiii, "nullFunc_iiiiiiii": nullFunc_iiiiiiii, "nullFunc_iiiiiiiii": nullFunc_iiiiiiiii, "nullFunc_iiiiij": nullFunc_iiiiij, "nullFunc_jiji": nullFunc_jiji, "nullFunc_v": nullFunc_v, "nullFunc_vi": nullFunc_vi, "nullFunc_vii": nullFunc_vii, "nullFunc_viii": nullFunc_viii, "nullFunc_viiii": nullFunc_viiii, "nullFunc_viiiii": nullFunc_viiiii, "nullFunc_viiiiii": nullFunc_viiiiii, "nullFunc_viijii": nullFunc_viijii, "setTempRet0": setTempRet0, "stackTrace": stackTrace, "table": wasmTable, "tempDoublePtr": tempDoublePtr };
+var asmLibraryArg = { "___cxa_uncaught_exceptions": ___cxa_uncaught_exceptions, "___gxx_personality_v0": ___gxx_personality_v0, "___lock": ___lock, "___map_file": ___map_file, "___setErrNo": ___setErrNo, "___syscall140": ___syscall140, "___syscall145": ___syscall145, "___syscall6": ___syscall6, "___syscall91": ___syscall91, "___unlock": ___unlock, "___wasi_fd_write": ___wasi_fd_write, "__addDays": __addDays, "__arraySum": __arraySum, "__emscripten_syscall_munmap": __emscripten_syscall_munmap, "__isLeapYear": __isLeapYear, "__memory_base": 1024, "__table_base": 0, "_abort": _abort, "_emscripten_get_heap_size": _emscripten_get_heap_size, "_emscripten_memcpy_big": _emscripten_memcpy_big, "_emscripten_resize_heap": _emscripten_resize_heap, "_fd_write": _fd_write, "_getenv": _getenv, "_llvm_stackrestore": _llvm_stackrestore, "_llvm_stacksave": _llvm_stacksave, "_pthread_cond_wait": _pthread_cond_wait, "_strftime": _strftime, "_strftime_l": _strftime_l, "abort": abort, "abortOnCannotGrowMemory": abortOnCannotGrowMemory, "abortStackOverflow": abortStackOverflow, "demangle": demangle, "demangleAll": demangleAll, "getTempRet0": getTempRet0, "jsStackTrace": jsStackTrace, "memory": wasmMemory, "nullFunc_ii": nullFunc_ii, "nullFunc_iidiiii": nullFunc_iidiiii, "nullFunc_iii": nullFunc_iii, "nullFunc_iiii": nullFunc_iiii, "nullFunc_iiiii": nullFunc_iiiii, "nullFunc_iiiiid": nullFunc_iiiiid, "nullFunc_iiiiii": nullFunc_iiiiii, "nullFunc_iiiiiid": nullFunc_iiiiiid, "nullFunc_iiiiiii": nullFunc_iiiiiii, "nullFunc_iiiiiiii": nullFunc_iiiiiiii, "nullFunc_iiiiiiiii": nullFunc_iiiiiiiii, "nullFunc_iiiiij": nullFunc_iiiiij, "nullFunc_jiji": nullFunc_jiji, "nullFunc_v": nullFunc_v, "nullFunc_vi": nullFunc_vi, "nullFunc_vii": nullFunc_vii, "nullFunc_viii": nullFunc_viii, "nullFunc_viiii": nullFunc_viiii, "nullFunc_viiiii": nullFunc_viiiii, "nullFunc_viiiiii": nullFunc_viiiiii, "nullFunc_viijii": nullFunc_viijii, "setTempRet0": setTempRet0, "stackTrace": stackTrace, "table": wasmTable, "tempDoublePtr": tempDoublePtr };
 // EMSCRIPTEN_START_ASM
 var asm =Module["asm"]// EMSCRIPTEN_END_ASM
 (asmGlobalArg, asmLibraryArg, buffer);
