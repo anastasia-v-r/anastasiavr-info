@@ -1,13 +1,34 @@
-#grid {
+body {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2vw;
+    grid-template-rows: 10vh 90vh;
+    grid-template-columns: 15vw 85vw;
+    grid-template-areas: 
+        "header header"
+        "sidebar main";
+    background: blue;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0%;
+    position: fixed;
 }
 
-#grid > div {
-    font-size: 5vw;
-    padding: .5em;
+.sitenav {
+    grid-area: header;
     background: gold;
-    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 5fr;
+}
+
+.contentnav {
+    grid-area: sidebar;
+    background: salmon;
+}
+
+.content {
+    grid-area: main;
+    background: rebeccapurple;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
