@@ -5,7 +5,7 @@ body {
     grid-template-areas: 
         "header header"
         "main main";
-    background: blue;
+    background: black;
     min-width: 100%;
     min-height: 100%;
     margin: 0%;
@@ -17,7 +17,7 @@ body {
     background: orange;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 2fr 6fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 5fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .sitenav .box{

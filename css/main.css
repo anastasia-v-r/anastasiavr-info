@@ -1,15 +1,14 @@
 body {
+    display: grid;
+    grid-template-rows: 100vh;
+    grid-template-columns: 10vw 90vw;
+    grid-template-areas: 
+        "sidebar main";
     background: blue;
     min-width: 100%;
     min-height: 100%;
     margin: 0%;
     position: fixed;
-}
-
-.main {
-    display: grid;
-    grid-template-rows: 1fr;
-
 }
 
 .contentnav {
