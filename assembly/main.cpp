@@ -1,8 +1,9 @@
 #include <iostream>
+#include <stdlib.h>
 
 int main() {
     int num;
-    std::cout << "Please enter an unsigned integer" << std::endl;
-    std::cin >> num;
-    std::cout << "You enetered [" << num << "]\n";
+    std::printf("Please enter a number : ");
+    std::scanf("%d", &num);
+    std::printf("\nYou entered the number [%d]\n", num);
 }
