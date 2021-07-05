@@ -1,2 +1,2 @@
-alert("⚠️ [Site Not Yet Finished] ⚠️");
+alert("⚠️ when the software");
 textFit(document.querySelector("sitenav"));
