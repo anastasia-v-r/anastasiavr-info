@@ -1,0 +1,25 @@
+body {
+    display: grid;
+    grid-template-rows: 100vh;
+    grid-template-columns: 10vw 90vw;
+    grid-template-areas: 
+        "sidebar main";
+    background: blue;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0%;
+    position: fixed;
+}
+
+.contentnav {
+    grid-area: sidebar;
+    background: rgb(255, 194, 80);
+}
+
+.content {
+    grid-area: main;
+    background: rebeccapurple;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}

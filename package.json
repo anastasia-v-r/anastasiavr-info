@@ -1,5 +1,5 @@
 {
-  "name": "faunsce_tk",
+  "name": "faunsce.tk",
   "author": "Dominik Rutter <dominik.rutter@gmail.com> (https://www.github.com/Faunsce)",
   "version": "0.0.1",
   "description": "My personal website",
@@ -7,19 +7,29 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "vue": "^3.1.4"
+    "vue": "^3.1.4",
+    "core-js": "^3.6.5"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.1.4",
-    "@vitejs/plugin-vue": "^1.2.4",
-    "vite": "^2.4.0"
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Faunsce/faunsce.tk.git"
@@ -27,5 +37,20 @@
   "bugs": {
     "url": "https://github.com/Faunsce/faunsce.tk/issues"
   },
-  "homepage": "https://github.com/Faunsce/faunsce.tk#readme"
+  "homepage": "https://github.com/Faunsce/faunsce.tk#readme",
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+    
+  }
 }
