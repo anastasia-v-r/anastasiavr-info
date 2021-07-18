@@ -92,18 +92,34 @@ export default {
         }
 
         .box1 {
+          flex: none;
+          order: 0;
+          flex-grow: 0;
+          margin: 0px 0px;
           background: red;
         }
 
         .box2 {
+          flex: none;
+          order: 1;
+          flex-grow: 0;
+          margin: 0px 0px;
           background: red;
         }
 
         .box3 {
+          flex: none;
+          order: 2;
+          flex-grow: 0;
+          margin: 0px 0px;
           background: red;
         }
 
         .box4 {
+          flex: none;
+          order: 3;
+          flex-grow: 0;
+          margin: 0px 0px;
           background: red;
         }
 
