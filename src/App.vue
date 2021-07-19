@@ -153,8 +153,6 @@ export default {
         position: static;
         width: 650px;
         height: 200px;
-        left: calc(50% - 100%/2);
-        top: calc(50% - 100%/2);
 
         background: #7B337D;
         border: 3px solid #000000;
@@ -186,8 +184,12 @@ export default {
 
           color: #FFFFFF;
 
-          -webkit-text-stroke: 2px solid #02f000;
-          text-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+          text-shadow:
+            -2px -2px 0 #000,  
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            2px 2px 0 #000,
+            10px 4px 4px rgba(0, 0, 0, 0.25);
 
           /* Inside Auto Layout */
 
