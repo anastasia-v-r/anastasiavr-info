@@ -2,29 +2,16 @@
   <div class="site">
     <div class="nav">
       <div class="logo" />
-      <div class="pages">
-        <div class="home">
-          <!-- TODO: Add wolf SVG here but make sure it ends up at 100px x 100px @ 1080p (scaled up or down based on viewport) -->
-        </div>
-        <div class="box" style="order: 0">
-          <p>About</p>
-        </div>
-        <div class="box" style="order: 1">
-          <p>Crafts</p>
-        </div>
-        <div class="box" style="order: 2">
-          <p>Programs</p>
-        </div>
-        <div class="box" style="order: 3">
-          <p>Social</p>
-        </div>    
+      <div class="nav-links">
+          <div class="nav-link" style="order: 0">About</div>
+          <div class="nav-link" style="order: 1">Crafts</div>
+          <div class="nav-link" style="order: 2">Programs</div>
+          <div class="nav-link" style="order: 3">Social</div> 
       </div>  
     </div>
     <div class="content">
       <div class="namebox">
-        <div class="name">
-          <p>Faunsce</p>
-        </div>
+        <div class="name">Faunsce</div>
       </div>
     </div>
   </div>
@@ -43,82 +30,172 @@ export default {
 
 <style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap');
 
   .site {
     display: grid;
-    grid-area: inherit;
     grid-template-columns: 1fr;
     grid-template-rows: 48px 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       "nav"
-      "content"
+      "site"    
     ;
+
     width: 100vw;
     height: 100vh;
+    background: #210535;;
   }
 
     .nav {
       grid-area: nav;
-      display: grid;
-      grid-template-columns: 48px 1fr 48px;
-      grid-template-rows: 1fr;
-      grid-template-areas: 
-        "logo pages ."
-      ;
       background: #330851;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0px;
+
+      position: relative;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
     }
       .logo {
-        grid-area: logo;
+        /* Icon */
+
         background: coral;
+        position: static;
+        width: 48px;
+        height: 48px;
+        left: 0px;
+        top: 0px;
+
+        /* Inside Auto Layout */
+
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+        margin: 0px 0px;
       }
 
-      .pages {
-        grid-area: pages;
+      .nav-links {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 0px;
+        padding: 0px 144px;
+
+        left: 48px;
+        top: 0px;
+
+
+        /* Inside Auto Layout */
+
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 1;
+        margin: 0px 0px;
       }
 
-        p {
-          color: #F5D5E0;
-          font-family: 'Work Sans', sans-serif;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 24px;
-          line-height: 0px;
-          background: red;
-        }
+          .nav-link {
+            position: static;
+            width: 141px;
+            height: 48px;
+            left: 1587px;
+            top: 0px;
 
-        .box {
-          flex: none;
-          flex-grow: 0;
-          margin: 0px 0px;
-          background: red;
-        }
+            font-family: Work Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 48px;
+            line-height: 56px;
+
+            color: #F5D5E0;
+
+
+            /* Inside Auto Layout */
+
+            flex: none;
+            order: 3;
+            align-self: stretch;
+            flex-grow: 0;
+            margin: 0px 0px;
+          }
 
     .content {
-      grid-area: content;
-      display: grid;
-      grid-template-columns: 3fr 1fr 3fr;
-      grid-auto-rows: 3fr 1fr 3fr;
-      grid-template-areas: 
-        ". . ."
-        ". namebox ."
-        ". . ."
-      ;
-      background: #210535;
+      grid-area: site;
+      /* Auto Layout */
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+
+      position: static;
+      width: 100%;
+      height: 100%;
+      left: 0px;
     }
 
       .namebox {
-        grid-area: namebox;
-        display: inherit;
-        background: blue;
+        /* Auto Layout */
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+
+        position: static;
+        width: 650px;
+        height: 200px;
+        left: calc(50% - 100%/2);
+        top: calc(50% - 100%/2);
+
+        background: #7B337D;
+        border: 3px solid #000000;
+        box-sizing: border-box;
+        border-radius: 100px;
+        border-collapse: separate;
+
+        /* Inside Auto Layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin: 0px 0px;
       }
 
         .name {
-          color: brown;
+          position: static;
+          width: 100%;
+          height: 100%;
+
+          font-family: Seaweed Script;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 216px;
+          line-height: 293px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+
+          color: #FFFFFF;
+
+          -webkit-text-stroke: 2px solid #02f000;
+          text-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+
+          /* Inside Auto Layout */
+
+          flex: none;
+          order: 0;
+          align-self: stretch;
+          flex-grow: 1;
+          margin: 0px 0px;
         }
 
 </style>
