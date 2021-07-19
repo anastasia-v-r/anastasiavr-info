@@ -6,16 +6,16 @@
         <div class="home">
           <!-- TODO: Add wolf SVG here but make sure it ends up at 100px x 100px @ 1080p (scaled up or down based on viewport) -->
         </div>
-        <div class="box1">
+        <div class="box" style="order: 0">
           <p>About</p>
         </div>
-        <div class="box2">
+        <div class="box" style="order: 1">
           <p>Crafts</p>
         </div>
-        <div class="box3">
+        <div class="box" style="order: 2">
           <p>Programs</p>
         </div>
-        <div class="box4">
+        <div class="box" style="order: 3">
           <p>Social</p>
         </div>    
       </div>  
@@ -91,33 +91,8 @@ export default {
           background: red;
         }
 
-        .box1 {
+        .box {
           flex: none;
-          order: 0;
-          flex-grow: 0;
-          margin: 0px 0px;
-          background: red;
-        }
-
-        .box2 {
-          flex: none;
-          order: 1;
-          flex-grow: 0;
-          margin: 0px 0px;
-          background: red;
-        }
-
-        .box3 {
-          flex: none;
-          order: 2;
-          flex-grow: 0;
-          margin: 0px 0px;
-          background: red;
-        }
-
-        .box4 {
-          flex: none;
-          order: 3;
           flex-grow: 0;
           margin: 0px 0px;
           background: red;
