@@ -1,7 +1,9 @@
 <template>
   <div class="site">
     <div class="nav">
-      <div class="logo" />
+      <div class="logo">
+        <img src="./assets/wolf.svg" alt="Site Logo" width="48" height="48">
+      </div>
       <div class="nav-links">
           <div class="nav-link" style="order: 0">About</div>
           <div class="nav-link" style="order: 1">Crafts</div>
@@ -64,7 +66,7 @@ export default {
       .logo {
         /* Icon */
 
-        background: coral;
+        background: #7B337D;
         position: static;
         width: 48px;
         height: 48px;
