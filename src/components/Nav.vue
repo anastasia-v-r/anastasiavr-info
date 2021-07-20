@@ -7,7 +7,7 @@
 		</div>
 		<div class="nav-links">
 			<router-link class="nav-link" style="order: 0" to="/about">About</router-link>
-			<router-link class="nav-link" style="order: 1" to="/home">Crafts</router-link>
+			<router-link class="nav-link" style="order: 1" to="/crafts">Crafts</router-link>
 			<router-link class="nav-link" style="order: 2" to="/programs">Programs</router-link>
 			<router-link class="nav-link" style="order: 3" to="/social">Social</router-link> 
 		</div>  

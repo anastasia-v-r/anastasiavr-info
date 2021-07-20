@@ -3,8 +3,8 @@ import { createRouter, createWebHistory } from "vue-router";
 const routes = [
   {
     path: "/",
-    name: "Content",
-    component: () => import(/* webpackChunkName: "home" */ "@/views/Content.vue"),
+    name: "Home",
+    component: () => import(/* webpackChunkName: "home" */ "@/views/Home.vue"),
   },
   {
     path: "/about",
@@ -15,9 +15,19 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ "@/views/About.vue"),
   },
   {
-    path: "/home",
-    name: "Home",
-    component: () => import( "@/views/Home.vue"),
+    path: "/crafts",
+    name: "Crafts",
+    component: () => import(/* webpackChunkName: "crafts" */ "@/views/Crafts.vue"),
+  },
+  {
+    path: "/programs",
+    name: "Programs",
+    component: () => import(/* webpackChunkName: "programs" */ "@/views/Programs.vue"),
+  },
+  {
+    path: "/social",
+    name: "Social",
+    component: () => import(/* webpackChunkName: "social" */ "@/views/Social.vue"),
   },
 ];
 
