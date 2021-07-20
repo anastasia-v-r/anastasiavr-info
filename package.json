@@ -1,27 +1,19 @@
 {
   "name": "faunsce.tk",
-  "author": "Dominik Rutter <dominik.rutter@gmail.com> (https://www.github.com/Faunsce)",
   "version": "0.0.1",
-  "description": "My personal website",
-  "main": "index.js",
-  "license": "UNLICENSED",
   "private": true,
-  "homepage": "https://github.com/Faunsce/faunsce.tk#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Faunsce/faunsce.tk.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Faunsce/faunsce.tk/issues"
-  },
+  "description": "My personal website",
+  "author": "Dominik Rutter <dominik.rutter@gmail.com> (https://www.github.com/Faunsce)",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "main": "index.js",
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -55,5 +47,14 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/Faunsce/faunsce.tk/issues"
+  },
+  "homepage": "https://github.com/Faunsce/faunsce.tk#readme",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Faunsce/faunsce.tk.git"
+  }
 }

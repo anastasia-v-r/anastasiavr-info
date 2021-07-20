@@ -2,26 +2,22 @@
   <div class="site">
     <div class="nav">
       <div class="logo">
-        <img src="./assets/wolf.svg" alt="Site Logo" width="48" height="48">
+        <router-link to="/">
+          <img src="@/assets/wolf.svg" alt="Site Logo" width="48" height="48">
+        </router-link>
       </div>
       <div class="nav-links">
-          <div class="nav-link" style="order: 0">About</div>
-          <div class="nav-link" style="order: 1">Crafts</div>
-          <div class="nav-link" style="order: 2">Programs</div>
-          <div class="nav-link" style="order: 3">Social</div> 
+          <router-link class="nav-link" style="order: 0" to="/about">About</router-link>
+          <router-link class="nav-link" style="order: 1" to="/home">Crafts</router-link>
+          <router-link class="nav-link" style="order: 2" to="/programs">Programs</router-link>
+          <router-link class="nav-link" style="order: 3" to="/social">Social</router-link> 
       </div>  
     </div>
-    <div class="content">
-      <div class="namebox">
-        <div class="name">Faunsce</div>
-      </div>
-    </div>
+    <router-view style="grid-area:site"/>
   </div>
 </template>
 
 <script>
-//import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
   name: "App",
   components: {
@@ -133,84 +129,4 @@ export default {
             flex-grow: 0;
             margin: 0px 0px;
           }
-
-    .content {
-      grid-area: site;
-      /* Auto Layout */
-
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      padding: 0px;
-
-      position: static;
-      width: 100%;
-      height: 100%;
-      left: 0px;
-    }
-
-      .namebox {
-        /* Auto Layout */
-
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 0px;
-
-        position: static;
-        width: 650px;
-        height: 200px;
-
-        background: #7B337D;
-        border: 3px solid #000000;
-        box-sizing: border-box;
-        border-radius: 100px;
-        border-collapse: separate;
-
-        /* Inside Auto Layout */
-
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-        margin: 0px 0px;
-      }
-
-        .name {
-          position: static;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-items: center;
-          align-content: center;
-          justify-content: center;
-          width: 100%;
-          height: 100%;
-
-          font-family: Seaweed Script;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 216px;
-          line-height: 293px;
-
-          color: #FFFFFF;
-
-          text-shadow:
-            -2px -2px 0 #000,  
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            2px 2px 0 #000,
-            10px 4px 4px rgba(0, 0, 0, 0.25);
-
-          /* Inside Auto Layout */
-
-          flex: none;
-          order: 0;
-          align-self: stretch;
-          justify-self: stretch;
-          flex-grow: 1;
-          margin: 0px 0px;
-        }
-
 </style>
