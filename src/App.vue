@@ -101,6 +101,13 @@ export default {
       }
 
           .nav-link {
+            display: flex;
+            flex-direction: row;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+
             position: static;
             width: 141px;
             height: 48px;
@@ -110,7 +117,7 @@ export default {
             font-family: Work Sans;
             font-style: normal;
             font-weight: normal;
-            font-size: 48px;
+            font-size: 36px;
             line-height: 56px;
 
             color: #F5D5E0;
@@ -170,6 +177,12 @@ export default {
 
         .name {
           position: static;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-items: center;
+          align-content: center;
+          justify-content: center;
           width: 100%;
           height: 100%;
 
@@ -178,9 +191,6 @@ export default {
           font-weight: normal;
           font-size: 216px;
           line-height: 293px;
-          display: flex;
-          align-items: center;
-          text-align: center;
 
           color: #FFFFFF;
 
@@ -196,6 +206,7 @@ export default {
           flex: none;
           order: 0;
           align-self: stretch;
+          justify-self: stretch;
           flex-grow: 1;
           margin: 0px 0px;
         }
