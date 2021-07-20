@@ -22,6 +22,10 @@ export default {
 </script>
 
 <style scoped>
+a {
+	text-decoration: none;
+}
+
 .nav {
   background: #330851;
 
@@ -30,7 +34,7 @@ export default {
   align-items: center;
   padding: 0px;
 
-      position: relative;
+	position: relative;
   width: 100%;
   height: 100%;
   left: 0px;
