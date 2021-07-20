@@ -1,26 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="site">
+    <Nav style="grid-area:nav"/>
+    <router-view style="grid-area:site"/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Nav from "@/components/Nav.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Nav
   },
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap');
+
+  .site {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 48px 1fr;
+    grid-template-areas:
+      "nav"
+      "site"    
+    ;
+
+    width: 100vw;
+    height: 100vh;
+    background: #210535;;
+  }
 </style>
