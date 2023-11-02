@@ -1,9 +1,9 @@
 {
-  "name": "faunsce.tk",
-  "version": "0.0.1",
+  "name": "anastasiavr.info",
+  "version": "0.1.0",
   "private": true,
   "description": "My personal website",
-  "author": "Dominik Rutter <dominik.rutter@gmail.com> (https://www.github.com/Faunsce)",
+  "author": "Anastasia Rutter <anastasia.v.rutter@gmail.com> (https://www.github.com/anastasia-v-r)",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -49,12 +49,12 @@
     "not dead"
   ],
   "bugs": {
-    "url": "https://github.com/Faunsce/faunsce.tk/issues"
+    "url": "https://github.com/anastasia-v-r/anastasiavr-info/issues"
   },
-  "homepage": "https://github.com/Faunsce/faunsce.tk#readme",
+  "homepage": "https://github.com/anastasia-v-r/anastasiavr-info#readme",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Faunsce/faunsce.tk.git"
+    "url": "git+https://github.com/anastasia-v-r/anastasiavr-info.git"
   }
 }
