@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="namebox">
-      <div class="name">Faunsce</div>
+      <div class="name">Anastasia</div>
     </div>
   </div>
 </template>
